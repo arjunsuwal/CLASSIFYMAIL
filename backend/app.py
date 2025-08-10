@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from llm_reply import generate_summary_and_reply
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../frontend', static_url_path='')
 CORS(app)
 
 @app.route('/process-email', methods=['POST'])
