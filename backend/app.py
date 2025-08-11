@@ -19,5 +19,9 @@ def process_email():
         'reply': reply
     })
 
+@app.route('/')
+def serve_index():
+    return app.send_static_file('frontend/index.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
