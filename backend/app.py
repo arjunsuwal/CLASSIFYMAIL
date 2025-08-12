@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from backend.llm_reply import generate_summary_and_reply
 from flask_cors import CORS
+import os
 
 frontend_path = os.path.join(os.path.dirname(__file__), '..', 'frontend')
 
